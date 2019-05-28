@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <style>
@@ -14,23 +13,23 @@ body {
 }
 
 .heading {
-    text-align: center;
+    margin-left: 80px;
     font-size: 2.0em;
     letter-spacing: 1px;
-    padding: 40px;
+    padding: 25px;
     color: white;
 }
 
 .gallery-image {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .gallery-image img {
-  height: 250px;
-  width: 350px;
+  height: 125px;
+  width: 175px;
   transform: scale(1.0);
   transition: transform 0.4s ease;
 }
@@ -38,31 +37,30 @@ body {
 .img-box {
   box-sizing: content-box;
   margin: 10px;
-  height: 250px;
-  width: 350px;
-  overflow: hidden;
+  height: 125px;
+  width: 175px;
   display: inline-block;
   color: white;
   position: relative;
-  background-color: white;
+  
 }
 
 .caption {
   position: absolute;
-  bottom: 5px;
-  left: 20px;
+  bottom: -20px;
+  left: 0px;
   opacity: 0.0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .transparent-box {
-  height: 250px;
-  width: 350px;
+  height: 137px;
+  width: 193px;
   background-color:rgba(0, 0, 0, 0);
   position: absolute;
-  top: 0;
-  left: 0;
-  transition: background-color 0.3s ease;
+  top: -6;
+  left: -9;
+  transition: background-color 0.4s ease;
 }
 
 .img-box:hover img { 
@@ -91,19 +89,33 @@ body {
 }
 </style>
 <script>
-function myFunction() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
 
-  /* Select the text field */
-  copyText.select();
 
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
+window.onload = function () {
+  // Get all the elements that match the selector as arrays
+  var copyBtn = Array.prototype.slice.call(document.querySelectorAll('.buttonstuff'));
+  var valueArea = Array.prototype.slice.call(document.querySelectorAll('.textstuff'));
 
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  // Loop through the button array and set up event handlers for each element
+  copyBtn.forEach(function(btn, idx){
+  
+    btn.addEventListener("click", function(){
+    
+      // Get the textarea who's index matches the index of the button
+      valueArea[idx].select();
+
+      try {
+        var msg = document.execCommand('copy') ? 'successful' : 'unsuccessful';
+        console.log('You have successfuly copyed ' + msg);
+      } catch (err) {
+        console.log('Sorry bud no copy');
+      } 
+      
+    });
+    
+  });
 }
+
 
 </script>
 
@@ -117,7 +129,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/36095c732009292_300168" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/36095c732009292_300168:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/36095c732009292_300168:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
@@ -126,7 +138,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/37684a7a2005657_300222" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/37684a7a2005657_300222:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/37684a7a2005657_300222:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div>
@@ -135,7 +147,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/36093bdd40015e2_300340" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/36093bdd40015e2_300340:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/36093bdd40015e2_300340:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div>
@@ -144,8 +156,17 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/363cb70f9000332_228250" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/363cb70f9000332_228250:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/363cb70f9000332_228250:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="https://images.prd.dlivecdn.com/emote/37a499809000955_300240" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/37a499809000955_300240:" id="myInput"><button class="buttonstuff">COPY</button></p>
+         
         </div>
       </div> 
     </div>
@@ -153,16 +174,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/35666fedf0080dd_220272" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/37a499809000955_300240:" id="myInput"><button onclick="myFunction()">COPY</button></p>
-         
-        </div>
-      </div> 
-    </div>
-    <div class="img-box">
-      <img src="https://images.prd.dlivecdn.com/emote/3769db69f005657_300326" alt="" />
-      <div class="transparent-box">
-        <div class="caption">
-          <input type="text" value=":emote/mine/dlive/35666fedf0080dd_220272:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/35666fedf0080dd_220272:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
@@ -171,7 +183,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/3769db69f005657_300326" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/3769db69f005657_300326:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/3769db69f005657_300326:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
@@ -180,7 +192,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/37a49be3a000955_300300" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/37a49be3a000955_300300:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/37a49be3a000955_300300:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
@@ -189,7 +201,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/363cdfa9700498d_300169" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/363cdfa9700498d_300169:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/363cdfa9700498d_300169:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
@@ -198,7 +210,7 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/37a486c9f005657_112112" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/37a486c9f005657_112112:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/37a486c9f005657_112112:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
@@ -207,7 +219,52 @@ function myFunction() {
       <img src="https://images.prd.dlivecdn.com/emote/3653952380057fa_240197" alt="" />
       <div class="transparent-box">
         <div class="caption">
-          <input type="text" value=":emote/mine/dlive/3653952380057fa_240197:" id="myInput"><button onclick="myFunction()">COPY</button></p>
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/3653952380057fa_240197:" id="myInput"><button class="buttonstuff">COPY</button></p>
+          
+        </div>
+      </div> 
+    </div>
+	<div class="img-box">
+      <img src="https://images.prd.dlivecdn.com/emote/354b982f70000ac_300300" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/354b982f70000ac_300300:" id="myInput"><button class="buttonstuff">COPY</button></p>
+          
+        </div>
+      </div> 
+    </div>
+	<div class="img-box">
+      <img src="https://images.prd.dlivecdn.com/emote/34da1ecd4008e3e_241328" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/34da1ecd4008e3e_241328:" id="myInput"><button class="buttonstuff">COPY</button></p>
+          
+        </div>
+      </div> 
+    </div>
+	<div class="img-box">
+      <img src="https://images.prd.dlivecdn.com/emote/3502da9f300109b_300385" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/3502da9f300109b_300385:" id="myInput"><button class="buttonstuff">COPY</button></p>
+          
+        </div>
+      </div> 
+    </div>
+	<div class="img-box">
+      <img src="https://images.prd.dlivecdn.com/emote/35f573a7c008a47_268348" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/35f573a7c008a47_268348:" id="myInput"><button class="buttonstuff">COPY</button></p>
+          
+        </div>
+      </div> 
+    </div>
+	<div class="img-box">
+      <img src="https://images.prd.dlivecdn.com/emote/363cdf20f009586_300299" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <input type="text" class="textstuff" readonly="readonly" value=":emote/mine/dlive/363cdf20f009586_300299:" id="myInput"><button class="buttonstuff">COPY</button></p>
           
         </div>
       </div> 
