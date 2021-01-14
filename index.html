@@ -1,62 +1,107 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
 
-.bgimg {
-  background-image: url('/assets/Images/slider/slide-1.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+<meta charset="UTF-8">
+<title>Shekhar Mines</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
+<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+<link rel="shortcut icon" href="images/ico/favicon.png">
+<!--[if IE]><![endif]-->
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/owlcarousel.js"></script>
+<script src="js/uikit.scrollspy.js"></script>
+<script src="js/scripts.js"></script>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body id="backtotop">
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
-<body>
-
-<div class="bgimg">
-  <div class="topleft">
-    <p>Shikhar Mines</p>
-  </div>
-  <div class="middle">
-    <h1>Website Under Construction..</h1>
-    <hr>
-    <p>7 days left</p>
-  </div>
-  <div class="bottomleft">
-    <p><a href="index-soon.html">Watch the Progress..</a></li></p>
-  </div>
+<div class="fullwidth clearfix">
+	<div id="topcontainer" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+		
+		<img src="logo.png" alt="coming soon." width="19%">
+		<h1><span>SHEKHAR MINES</span><br />is coming soon</h1>
+		<p>It's almost ready ... honest</p>
+		
+	</div>
 </div>
 
+<div class="arrow-separator arrow-white"></div>
+
+<div class="fullwidth colour1 clearfix">
+	<div id="countdown" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+
+		<div id="countdowncont" class="clearfix">
+			<ul id="countscript">
+				<li>
+					<span class="days">00</span>
+					<p>Days</p>
+				</li>
+				<li>
+					<span class="hours">00</span>
+					<p>Hours</p>
+				</li>
+				<li class="clearbox">
+					<span class="minutes">00</span>
+					<p>Minutes</p>
+				</li>
+				<li>
+					<span class="seconds">00</span>
+					<p>Seconds</p>
+				</li>
+			</ul>
+		</div>
+	
+	</div>
+</div>
+
+<div class="arrow-separator arrow-theme"></div>
+
+<div class="fullwidth colour2 clearfix">
+	<div id="maincont" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+
+		<p><strong>SHEKHAR MINES ~ </strong> is comming very soon! <a title="" href="#"></a>
+        <h2>We hear you! We are working hard to get us online again.<a href="index-soon.html"> <strong>see the progress</strong></a> </h2>
+        
+	
+	</div>
+</div>
+
+<div class="arrow-separator arrow-themelight"></div>
+
+<div class="fullwidth colour3 clearfix">
+	<div id="quotecont" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+
+        <div id="commentslider" class="owl-carousel">
+            <div class="item">
+                <p>"<strong>In 4<sup>th</sup> grade</strong> my science teacher told me to build a little robot for the science fair, I finished it in few hours and called it OPTIMUS PRIME</p>
+            	<p class="author">- IRON MAN</p>
+            </div>
+            <div class="item">
+                <p>"It's<strong> not who I am </strong> Underneath <em>but what I do that defines me."</p>
+            	<p class="author">- Batman</p>
+            </div>
+			<div class="item">
+                <p>" The greatest glory in living lies not in never falling, but in rising every time we fall."</p>
+            	<p class="author">- -Nelson Mandela</p>
+            </div>
+            
+        </div>
+	
+	</div>
+</div>
+
+
+   
 </body>
 </html>
